@@ -7,3 +7,4 @@
 
 ## Approach & Methodology:
 * ![Binary Search](../../images/code-chal-3.png)
+
