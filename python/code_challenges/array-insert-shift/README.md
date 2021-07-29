@@ -1,4 +1,4 @@
-# Code Challenge 1:
+# Code Challenge 2:
 
 ## Insert Shift Array
 
