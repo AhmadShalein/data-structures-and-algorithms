@@ -1,0 +1,27 @@
+import pytest
+from linked_list import LinkedList, Node
+
+# test creating a node
+# def test_create_node():
+#   assert Node()
+
+def test_node_has_value():
+  node = Node("Ahmad")
+  actual = node.value
+  assert actual == "Ahmad"
+  
+def test_node_has_next_attribute():
+  node = Node("Ahmad")
+  actual = node.next
+  assert True
+  
+def test_linkedlist():
+   assert LinkedList()
+   
+def test_insert():
+  ll = LinkedList()
+  with pytest.raises(AttributeError):
+    ll.head.value
+  ll.insert(5)
+  actual = ll.head.value
+  assert actual == 5 
