@@ -1,122 +1,55 @@
-class Node():
-  def __init__(self, data=None,next_node=None):
-      self.data = data
-      self.next_node = next_node
+# define a class called Node
+class Node:
+  def __init__(self, value):
+    self.value = value
+    self.next = None
+      
+  def __add__(self, other):
+    return Node(self.value + other.value)
 
   def __str__(self):
-      return self.data
+    return str(self.value)
+        
+# define a class called Linked List
+class LinkedList:
+  def __init__(self):
+    self.head = None
 
-  def get_next(self):
-      return self.next_node
-
-  def set_new_next(self, new_next):
-       self.next_node = new_next
-
-class LinkedList():
-    def __init__(self, head=None):
-        self.head = head
-
-    def insert(self, data): # this implementation of insert is constant O(1)
-        # data=str(data)
-        new_node = Node(data)
-        new_node.set_new_next(self.head)
-        self.head = new_node
-
-    def includes(self,value):
-        # value=str(value)
-        current = self.head
-        value_exists=False
-        while current and value_exists is False:
-            if current.data == value:
-                value_exists = True
-            else:
-                current = current.next_node
-        return value_exists
-
-    def append(self,value):
-        new_node = Node(value)
-        new_node.__str__()
-        current = self.head
-        if current :
-            while current.get_next() != None:
-                current = current.get_next()
-            current.set_new_next(new_node)
-        else:
-            self.head=Node(value)
-            current=self.head
-        return current.__str__()
-
-
-    def insertBefore(self ,value, newVal):
-        new_node = Node(newVal)
-        before = self.head
-        if self.head is None:
-            return "Linked List is empty!"
-        if not before.data == value:
-            old=before
-            while before:
-                if before.data == value:
-                    new_node.next_node = before
-                    old.next_node= new_node
-                    return
-                else:
-                    old = before
-                    before = before.next_node
-        else :
-            new_node.set_new_next(self.head)
-            self.head = new_node
-
-
-    def insertAfter(self ,value, newVal):
-        new_node = Node(newVal)
-        before=self.head
-        if value:
-            while before:
-                if before.data==value:
-                    new_node.next_node=before.next_node
-                    before.next_node=new_node
-                    return
-                before=before.next_node
-
-
-    def ll_kthFromEnd (self,k):
-        current = self.head
-        len =0
-        if k<0:
-            return "incorrect k value"
-
-        while current.next_node:
-            current = current.next_node
-            len += 1
-        if k >= len:
-            return "not exist"
-        current = self.head
-        for i in range(0,len - k):
-            current = current.next_node
-        return current.data
-    def __str__ (self):
-        output = ""
-        current = self.head
-        while current:
-            output += "{%s} -> " %(current.data,)
-            current = current.next_node
-        output += " None"
-        return output
-
-
+  def insert(self,value):
+    node = Node(value)
+    if self.head:
+      node.next = self.head
+    self.head = node
+      
+  def includes(self,value):
+    current = self.head
+    value_exists = False
+      
+    while current is False:
+      if current.data == value:
+        value_exists = True
+      else:
+        current = current.next
+      return value_exists
+    
+  def __str__(self):
+    string = ""
+    current = self.head
+      
+    while current:
+      value = current.value
+      if current.next is None:
+        string +=f"( {value} ) -> NULL"
+        break
+        string += f"( {value} ) -> "
+        current = current.next
+      return string
+         
+        
 if __name__ == "__main__":
-  linked_list = LinkedList()
-  print(linked_list.insertBefore(None,5))
-  linked_list.insert("Dario")
-  linked_list.insert("Ahmad")
-  linked_list.insert(5)
-  print(linked_list)
-  print(linked_list.includes("Ahmad"))
-  print(linked_list.includes("Dario"))
-  print(linked_list.includes(5))
-  print(linked_list.includes(15))
-
-  e_list=LinkedList()
-  e_list.append("test")
-  print(e_list)
-  print(linked_list.ll_kthFromEnd(2))
+  ll = LinkedList()
+  ll.insert("Ahmad")
+  ll.insert("Dario")
+  print(ll)
+  print(ll.includes("Ahmad"))
+  print(ll.includes("Dario"))
