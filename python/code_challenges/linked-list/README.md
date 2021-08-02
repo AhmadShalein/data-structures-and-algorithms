@@ -10,13 +10,3 @@
 * Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 * Define a method called toString (or str in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
-
-# Code Challenge 6:
-
-## Challenge:
-
-* Define a method called append which takes any value as an argument and adds a new node with the given value to the end of the list.
-
-* Define a method called insert before which takes any value as an argument and adds a new node with the given new value immediately before the first node that has the value.
-
-* Define a method called insert after which takes any value as an argument and adds a new node with the given new value immediately after the first node that has the value specified.
