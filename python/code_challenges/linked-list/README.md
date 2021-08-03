@@ -11,6 +11,7 @@
 
 * Define a method called toString (or str in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
 
+
 # Code Challenge 6:
 
 ## Linked List Insertions
@@ -22,3 +23,14 @@
 * Define a method called insert before which takes any value as an argument and adds a new node with the given new value immediately before the first node that has the value.
 
 * Define a method called insert after which takes any value as an argument and adds a new node with the given new value immediately after the first node that has the value specified.
+
+
+# Code Challenge 7:
+
+## Linked List kth
+
+## Challenge:
+
+* Define a method called kthFromEnd which takes any value as an argument a number, k, as a parameter.
+
+* Define a method called kth which takes any value as an argument and Return the node’s value that is k places from the tail of the linked list.
