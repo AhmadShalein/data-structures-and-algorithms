@@ -31,6 +31,6 @@
 
 ## Challenge:
 
-* Define a method called append which takes any value as an argument a number, k, as a parameter.
+* Define a method called kthFromEnd which takes any value as an argument a number, k, as a parameter.
 
 * Define a method called kth which takes any value as an argument and Return the node’s value that is k places from the tail of the linked list.
