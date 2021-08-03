@@ -1,8 +1,3 @@
-## Challange 8
-
-## Linked List zip
-
-
 # Code Challenge 8:
 
 ## Linked List zip
