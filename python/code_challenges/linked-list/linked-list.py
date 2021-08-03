@@ -90,6 +90,21 @@ class LinkedList:
     if not found:
         raise Exception("key not found")
           
+  # Lab 7
+  
+  def kthFromEnd(self,k):
+    current = self.head
+    lenght = -1
+    while current is not None:
+        current = current.next
+        lenght += 1
+    if k >= lenght:
+        return
+    current = self.head
+    for i in range (0:lenght-k):
+        current = current.next
+            
+            
 if __name__ == "__main__":
   ll = LinkedList()
   
