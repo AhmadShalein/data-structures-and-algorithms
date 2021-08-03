@@ -15,6 +15,8 @@ class LinkedList:
   def __init__(self):
     self.head = None
 
+  # Lab 5
+
   def insert(self,value):
     node = Node(value)
     if self.head:
@@ -44,12 +46,66 @@ class LinkedList:
         string += f"( {value} ) -> "
         current = current.next
       return string
-         
+ 
+  # Lab 6 
+            
+  def append(self,value):
+    node = Node(value)
+    if self.head == None:
+      self.head = node
+      return
+    else:
+      current = self.head
+      while current.next != None:
+        current = current.next
+      current.next = node
         
+  def insertBefore(self,value,key):
+    node = Node(value)
+    prev = self.head
+    current = self.head
+    found = false
+    while current:
+        if current.data == key:
+            prev.next = node
+            node.next = current
+            found = true
+            break
+        prev = current
+        current = current.next
+    if not found:
+        raise Exception("key not found")
+        
+  def insertAfter(self,value,key):
+    node = Node(value)
+    current = self.head
+    found = false
+    while current:
+        if current.data == key:
+            node.next = current.next
+            current.next = node
+            found = true
+            break
+        current = current.next
+    if not found:
+        raise Exception("key not found")
+          
 if __name__ == "__main__":
   ll = LinkedList()
+  
+  # Lab 5
+
   ll.insert("Ahmad")
   ll.insert("Dario")
   print(ll)
   print(ll.includes("Ahmad"))
   print(ll.includes("Dario"))
+    
+  # Lab 6
+  
+  ll.append("A")
+  ll.append("B")
+  assert ll.head.data == "A"
+  assert ll.head.next.data == "B"
+  assert ll.head.next.next == None
+  print(ll)

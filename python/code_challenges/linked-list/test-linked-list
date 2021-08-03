@@ -1,6 +1,8 @@
 import pytest
 from linked_list import LinkedList, Node
 
+# Lab 5
+
 # test creating a node
 # def test_create_node():
 #   assert Node()
@@ -25,3 +27,57 @@ def test_insert():
   ll.insert(5)
   actual = ll.head.value
   assert actual == 5 
+ 
+ # Lab 6
+ 
+ def test_append():
+    ll =  LinkedList()
+    ll.append("A")
+    ll.append("B")
+    assert ll.head.data == "A"
+    assert ll.head.next.data == "B"
+    assert ll.head.next.next == None
+    print(ll)
+    print(linked_list)
+
+
+def test_insertAfter():
+    ll2 = LinkedList()
+    try:
+        ll2.insertAfter(2,1)
+    except Exception as e:
+        print(e)
+        assert str(e) == "Key not found"
+    
+    ll2.append(1)
+    ll2.append(3)
+    ll2.insertAfter(2,1)
+
+    assert ll2.head.next.data == 2
+
+    try:
+        ll2.insertAfter(2,8)
+    except Exception as e:
+        print(e)
+        assert str(e) == "Key not found"
+        print("Test Passed")
+
+def test_insertBefore():
+    ll3 = LinkedList()
+    try:
+        ll3.insertBefore(2,1)
+    except Exception as e:
+        print(e)
+        assert str(e) == "Key not found"
+    
+    ll3.append(1)
+    ll3.append(3)
+    ll3.insertBefore(2,3)
+
+    assert ll3.head.next.data == 2
+
+    try:
+        ll3.insertBefore(2,8)
+    except Exception as e:
+        print(e)
+        assert str(e) == "Key not found"
