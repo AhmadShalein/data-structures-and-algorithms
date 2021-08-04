@@ -14,4 +14,4 @@
 * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Approach & Methodology:
-* ![Linked List zip](../../images/code-challange-8.png)
+![Linked List zip](../../images/code-challange-8.png)
