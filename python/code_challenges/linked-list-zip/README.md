@@ -6,4 +6,4 @@
 * 
 
 ## Approach & Methodology:
-* ![](../../images/code-challange-8.png)
+* ![Linked List zip](../../images/code-challange-8.png)
