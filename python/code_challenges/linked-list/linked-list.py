@@ -93,17 +93,20 @@ class LinkedList:
   # Lab 7
   
   def kthFromEnd(self,k):
+    if k < 0:
+        return "k is negative"
     current = self.head
-    lenght = -1
-    while current is not None:
+    lenght = 0
+    while current:
         current = current.next
         lenght += 1
-    if k >= lenght:
-        return
-    current = self.head
-    for i in range (0:lenght-k):
-        current = current.next
-            
+    if lenght >= k:
+        current = self.head
+        for i in range (lenght - k-1):
+            current = current.next
+    else:
+        return "Number of k is bigger than Nodes number!"
+    return current
             
 if __name__ == "__main__":
   ll = LinkedList()
