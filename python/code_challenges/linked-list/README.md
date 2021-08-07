@@ -36,4 +36,4 @@
 * Define a method called kth which takes any value as an argument and Return the node’s value that is k places from the tail of the linked list.
 
 ## Approach & Methodology:
-* ![Linked List kth](../../images/code-challange-7.png)
+![Linked List kth](../../images/code-challange-7.png)
