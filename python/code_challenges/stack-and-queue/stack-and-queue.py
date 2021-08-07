@@ -47,3 +47,6 @@ class Queue:
 
   def is_empty(self):
     return not self.front
+
+
+if __name__ == "__main__":
