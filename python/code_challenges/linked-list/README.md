@@ -34,3 +34,6 @@
 * Define a method called kthFromEnd which takes any value as an argument a number, k, as a parameter.
 
 * Define a method called kth which takes any value as an argument and Return the node’s value that is k places from the tail of the linked list.
+
+## Approach & Methodology:
+![Linked List kth](../../images/code-challange-7.png)
