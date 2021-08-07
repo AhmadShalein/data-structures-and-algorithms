@@ -28,7 +28,7 @@ class LinkedList:
     value_exists = False
       
     while current is False:
-      if current.data == value:
+      if current.value == value:
         value_exists = True
       else:
         current = current.next
@@ -64,12 +64,12 @@ class LinkedList:
     node = Node(value)
     prev = self.head
     current = self.head
-    found = false
+    found = False
     while current:
-        if current.data == key:
+        if current.value == key:
             prev.next = node
             node.next = current
-            found = true
+            found = True
             break
         prev = current
         current = current.next
@@ -79,12 +79,12 @@ class LinkedList:
   def insertAfter(self,value,key):
     node = Node(value)
     current = self.head
-    found = false
+    found = False
     while current:
-        if current.data == key:
+        if current.value == key:
             node.next = current.next
             current.next = node
-            found = true
+            found = True
             break
         current = current.next
     if not found:
@@ -105,7 +105,7 @@ if __name__ == "__main__":
   
   ll.append("A")
   ll.append("B")
-  assert ll.head.data == "A"
-  assert ll.head.next.data == "B"
+  assert ll.head.value == "A"
+  assert ll.head.next.value == "B"
   assert ll.head.next.next == None
   print(ll)
