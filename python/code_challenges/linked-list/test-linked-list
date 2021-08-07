@@ -81,3 +81,16 @@ def test_insertBefore():
     except Exception as e:
         print(e)
         assert str(e) == "Key not found"
+        
+# Lab 7
+
+def test_kth_From_End():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.append(5)
+    ll.append(6)
+    # ll.getKthNodeFromEnd(5)
+    assert str(ll.getKthNodeFromEnd(5)) == "1"
