@@ -17,5 +17,8 @@ def validate_brackets(input_brackets):
     return False
 
 if __name__=='__main__':
-    string = "{[]{}}"
-    print(validate_brackets(string))
+  string_one = "{[]{}}"
+  print(validate_brackets(string_one))
+
+  string_two = "{[][{}}"
+  print(validate_brackets(string_two))
