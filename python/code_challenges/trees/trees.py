@@ -42,17 +42,20 @@ class binary_tree():
      
 # Code challenge 16
 
-def find_maximum_value(root):
-    if root == None:
-        return 0
-    maximum_value = root.value
-    left_maximum_value = find_maximum_value(root.left)
-    right_maximum_value = find_maximum_value(root.right)
-    if (left_maximum_value > maximum_value):
-        maximum_value = left_maximum_value
-    if (right_maximum_value > maximum_value):
-        maximum_value = right_maximum_value
-    return maximum_value
+    def find_maximum_value(self):
+        if self.root == None:
+          return 0
+        maximum_value = self.root.value
+        def maximum_value_fun(root):
+          nonlocal maximum_value
+          if root.value > maximum_value:
+              maximum_value = root.value
+          if root.left:
+              maximum_value_fun(root.left)
+          if root.right:
+              maximum_value_fun(root.right)
+          return maximum_value
+        return maximum_value_fun(self.root)
 
 class binary_search_tree(binary_tree):
     def add(self, value):
@@ -132,5 +135,7 @@ if __name__=="__main__":
     bt.root.left.right.right = Node(11)
     bt.root.right.right = Node(9)
     bt.root.right.right.left = Node(4)
+    print(bt.pre_order(bt.root))
     print(bt.in_order(bt.root))
-    print("Maximum element is",find_maximum_value(bt.root))
+    print(bt.post_order(bt.root))
+    print("Maximum element is",bt.find_maximum_value())
