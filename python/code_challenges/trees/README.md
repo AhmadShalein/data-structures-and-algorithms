@@ -30,3 +30,26 @@
 * **Big (O)**:
   - Time --> O(n)
   - Space --> O(1)
+
+---------------------------------------------------------------------------------------------------
+
+# Code Challenge 16
+
+## Maximum Value in a Binary Tree
+
+## Challenge
+
+* Write the following method for the Binary Tree class.
+  
+* Find maximum value:
+    * Arguments: none.
+    * Returns: number.
+    * Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+* **Big (O)**:
+  - Time --> O(n)
+  - Space --> O(1)
+
+## Approach & Methodology:
+![Maximum_Value](../../images/code-challange-16.png)
