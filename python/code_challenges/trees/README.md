@@ -50,3 +50,6 @@
 * **Big (O)**:
   - Time --> O(n)
   - Space --> O(1)
+
+## Approach & Methodology:
+![Maximum_Value](../../images/code-challange-16.png)
