@@ -22,4 +22,4 @@
   - Space --> O(n)
 
 ## Approach & Methodology:
-![tree-breadth-first](../../images/code-challange-17.png)
+![tree-breadth-first](../../images/code-challange-18.png)
