@@ -1,6 +1,6 @@
 # Code Challenge 18
 
-## Breadth-first Traversal
+## Tree Fizz Buzz
 
 * Conduct “FizzBuzz” on a k-ary tree while traversing through it to create a new tree.
 
