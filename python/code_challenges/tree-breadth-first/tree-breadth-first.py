@@ -3,13 +3,13 @@ class Queue:
         self.front = None
         self.rear = None
     
-#     def __str__(self):
-#         current = self.front
-#         items = []
-#         while current:
-#             items.append(str(current.value))
-#             current = current.next
-#         return " ".join(items)
+    def __str__(self):
+        current = self.front
+        items = []
+        while current:
+            items.append(str(current.value))
+            current = current.next
+        return " ".join(items)
     
     def enqueue(self, value):
         node = Node(value)
@@ -37,6 +37,7 @@ class Node():
         self.value = value
         self.left = None
         self.right = None
+        self.next = None
 
     def __str__(self):
         return str(self.value)
@@ -72,20 +73,21 @@ class binary_tree():
             post_order_output.append(root.value)
         return post_order_output
       
-def tree_breadth_first(input):
-        breadth_first_output = []
-        if not input.root:
-            return []
-        queue = Queue()
-        queue.enqueue(input.root)
-        while queue.front:
-            current = queue.dequeue()
-            breadth_first_output = breadth_first_output + [current.value]
-            if current.left:
-                queue.enqueue(current.left)
-            if current.right:
-                queue.enqueue(current.right)
-        return breadth_first_output
+    def tree_breadth_first(self):
+            output = []
+            temp = None
+            queue = Queue()
+            queue.enqueue(self.root)
+            # if not self.root:
+            #     return
+            while queue.front:
+                temp = queue.dequeue()
+                output.append(temp.value)
+                if temp.left:
+                    queue.enqueue(temp.left)
+                if temp.right:
+                    queue.enqueue(temp.right)
+            return output
 
 if __name__ == "__main__":
     bt = binary_tree()
@@ -98,4 +100,4 @@ if __name__ == "__main__":
     bt.root.right.right.left=Node(4)
     bt.root.left.right.left=Node(5)
     bt.root.left.right.right = Node(11)
-    print(tree_breadth_first(bt)) #[2,7,5,2,6,9,5,11,4]
+    print(bt.tree_breadth_first()) #[2,7,5,2,6,9,5,11,4]
