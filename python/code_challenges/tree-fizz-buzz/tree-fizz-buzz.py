@@ -73,4 +73,6 @@ if __name__ == "__main__":
     bt.root.right.right.left=Node(4)
     bt.root.left.left.right=Node(5)
     bt.root.left.right.left = Node(11)
-    print (FizzBuzzTree(bt))
+    expected = ['Fizz','FizzBuzz','8','Buzz','Fizz','11','Buzz','Fizz','4']
+    actual = FizzBuzzTree(bt)
+    assert expected == actual
