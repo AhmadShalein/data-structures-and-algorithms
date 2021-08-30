@@ -9,10 +9,18 @@
   * Present a complete set of working tests.
   
 ## Whiteboard Process
-![Insertion Sort](../../images/code-challange-21.png)
+![Insertion Sort](../../images/code-challange-26.png)
+![Trace Example](../../images/code-trace-26.png)
 
 ## Approach & Efficiency
   * Time: O(n^2)
     - The basic operation of this algorithm is comparison. This will happen n*(n-1) number of times, concluding the algorithm to be n squared.
   * Space: O(1)
     - This list is being sorted in place…keeping the space at constant O(1).
+
+## Solution
+* To sort an array of size n in ascending order:
+    - Iterate from arr[1] to arr[n] over the array.
+    - Compare the current element (key) to its predecessor.
+    - If the key element is smaller than its predecessor, compare it to the elements before.
+* Move the greater elements one position up to make space for the swapped element.
