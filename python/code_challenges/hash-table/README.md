@@ -1,5 +1,3 @@
-hashtable
-
 # Code Challenge 30
 
 ## Hash Table
