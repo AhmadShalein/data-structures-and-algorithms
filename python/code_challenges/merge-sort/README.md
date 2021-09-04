@@ -10,7 +10,6 @@
   
 ## Whiteboard Process
 ![Insertion Sort](../../images/code-challange-27.png)
-![Trace Example](../../images/code-trace-27.png)
 
 ## Approach & Efficiency
   * Time: O(n.logn)
