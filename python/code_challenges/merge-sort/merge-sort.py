@@ -6,6 +6,7 @@ def mergesort(arr):
     mergesort(left)
     mergesort(right)
     merge(arr,left,right)
+  return arr
 
 
 def merge(arr,left,right):
