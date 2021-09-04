@@ -1,11 +1,12 @@
 def mergesort(arr):
-  if len(arr) > 1:
-    mid = len(arr)//2
-    left = arr[:mid]
-    right = arr[mid:]
-    mergesort(left)
-    mergesort(right)
-    merge(arr,left,right)
+    if len(arr) > 1:
+        mid = len(arr)//2
+        left = arr[:mid]
+        right = arr[mid:]
+        mergesort(left)
+        mergesort(right)
+        merge(arr,left,right)
+    return arr
 
 
 def merge(arr,left,right):
