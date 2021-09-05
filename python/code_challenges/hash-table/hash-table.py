@@ -47,14 +47,3 @@ class HashTable():
     for idx , element in enumerate(self.arr[h]):
       if element[0] == key:
         del self.arr[h][idx]
-
-if __name__ == "__main__":
-  hash_table = HashTable()
-  hash_table.add('August 1st',10)
-  hash_table.add('August 5th',50)
-  hash_table.add('August 10th',100)
-  hash_table.add('August 15th',150)
-  hash_table.add('August 20th',200)
-  hash_table.add('August 25th',250)
-  for idx in hash_table.arr:
-    print(idx)
