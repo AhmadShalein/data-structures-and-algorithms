@@ -1,5 +1,5 @@
 class HashTable():
-  def __init__(self ,size = 16):
+  def __init__(self ,size = 1024):
     """initialization hash table"""
     self.max = size #length of list
     self.arr = [[] for i in range(self.max)] 
