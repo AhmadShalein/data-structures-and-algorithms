@@ -49,26 +49,3 @@ class Graph():
    
   def print_graph(self):
     print(self._adjacency_list)
-
-
-if __name__ == "__main__":
-  graph = Graph()
-  v1 = graph.add_node('A')
-  v2 = graph.add_node('B')
-  v3 = graph.add_node('C')
-  v4 = graph.add_node('D')
-  v5 = graph.add_node('E')
-  graph.add_edge(v1,v2,1)
-  graph.add_edge(v1,v3,2)
-  graph.add_edge(v2,v4,4)
-  graph.add_edge(v3,v4,8)
-  graph.add_edge(v3,v5,3)
-  graph.add_edge(v4,v5,5)
-  assert graph.size() == 5
-  print(graph.get_nodes())
-  print(graph.neighbors(v1))
-  print(graph.neighbors(v2))
-  print(graph.neighbors(v3))
-  print(graph.neighbors(v4))
-  print(graph.neighbors(v5))
-  graph.print_graph()
