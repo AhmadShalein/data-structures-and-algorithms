@@ -27,7 +27,7 @@ class Graph():
     
   def add_node(self,value):
     new_v = Vertex(value)
-    new_v = str(new_v)
+#     new_v = str(new_v)
     self._adjacency_list[new_v] = []
     return new_v
     
@@ -83,5 +83,21 @@ class Graph():
       return False,'$0'     
     return True,'$'+ str(sum)
     
+#Lab 38
+  def graph_depth_first(self,node):
+    visited = set()
+    visited.add(node)
+    depth_first_list = []
+    def __DFS(node,visited,depth_first_list):
+        visited.add(node)
+        depth_first_list.append(node.value)
+        neighbors = self.neighbors(node)
+        if neighbors != 'Empty':
+            for i in neighbors:
+                if i.vertix not in visited :
+                    __DFS(i.vertix,visited,depth_first_list)
+    __DFS(node,visited,depth_first_list)
+    return depth_first_list 
+
   def print_graph(self):
     print(self._adjacency_list)
