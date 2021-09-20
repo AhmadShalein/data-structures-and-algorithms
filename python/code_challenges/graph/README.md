@@ -115,3 +115,34 @@
   - [x] README for this challenge is complete.
   - [x] Description, Approach & Efficiency, Solution.
   - [x] Link to code.
+
+---
+
+# Code challenge 38
+
+## Depth First Preorder Traversal
+    * Return the Deepth path in graph.
+
+## Challenge Summary
+
+  * Write the following method for the Graph class:
+        - depth first.
+        - Arguments: Node (Starting point of search).
+        - Return: A collection of nodes in their pre-order depth-first traversal order.
+        - Display the collection.
+
+## Approach & Efficiency:
+  ![depth-first-preorder-traversal](../../images/code-challange-38.png)
+
+  * Big O:
+    - Time: O(n)
+    - Space: O(1)
+
+## Tasks:
+  - [x] Top-level README “Table of Contents” is updated.
+  - [x] Feature tasks for this challenge are completed.
+  - [x] Unit tests written and passing.
+  - [x] Edge Case (if applicable/obvious).
+  - [x] README for this challenge is complete.
+  - [x] Description, Approach & Efficiency, Solution.
+  - [x] Link to code.
